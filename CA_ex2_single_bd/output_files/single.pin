@@ -1,0 +1,560 @@
+ -- Copyright (C) 2018  Intel Corporation. All rights reserved.
+ -- Your use of Intel Corporation's design tools, logic functions 
+ -- and other software and tools, and its AMPP partner logic 
+ -- functions, and any output files from any of the foregoing 
+ -- (including device programming or simulation files), and any 
+ -- associated documentation or information are expressly subject 
+ -- to the terms and conditions of the Intel Program License 
+ -- Subscription Agreement, the Intel Quartus Prime License Agreement,
+ -- the Intel FPGA IP License Agreement, or other applicable license
+ -- agreement, including, without limitation, that your use is for
+ -- the sole purpose of programming logic devices manufactured by
+ -- Intel and sold by Intel or its authorized distributors.  Please
+ -- refer to the applicable agreement for further details.
+ -- 
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- NC            : No Connect. This pin has no internal connection to the device.
+ -- DNU           : Do Not Use. This pin MUST NOT be connected.
+ -- VCCPGM        : Dedicated power pin for configuration, which MUST be connected to 1.8V, 2.5V, 3.0V or 3.3V depending on the requirements of the configuration device.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.1V).
+ -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
+ --                 of its bank.
+ --                  Bank 3A:       2.5V
+ --                  Bank 3B:       2.5V
+ --                  Bank 4A:       2.5V
+ --                  Bank 5A:       2.5V
+ --                  Bank 5B:       2.5V
+ --                  Bank 7A:  2.5V
+ --                  Bank 8A:  2.5V
+ --                  Bank 9A:  Dedicated configuration pins only, no VCCIO required.
+ -- RREF          : External reference resistor for the quad, MUST be connected to
+ --                 GND via a 2k Ohm resistor.
+ -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
+ --                  It can also be used to report unused dedicated pins. The connection
+ --                  on the board for unused dedicated pins depends on whether this will
+ --                  be used in a future design. One example is device migration. When
+ --                  using device migration, refer to the device pin-tables. If it is a
+ --                  GND pin in the pin table or if it will not be used in a future design
+ --                  for another purpose the it MUST be connected to GND. If it is an unused
+ --                  dedicated pin, then it can be connected to a valid signal on the board
+ --                  (low, high, or toggling) if that signal is required for a different
+ --                  revision of the design.
+ -- GND+          : Unused input pin. It can also be used to report unused dual-purpose pins.
+ --                  This pin should be connected to GND. It may also be connected  to a
+ --                  valid signal  on the board  (low, high, or toggling)  if that signal
+ --                  is required for a different revision of the design.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks, connect each pin marked GND*
+ --                  either individually through a 10k Ohm resistor to GND or tie all pins
+ --                  together and connect through a single 10k Ohm resistor to GND.
+ -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
+ -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
+ -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
+ -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
+ -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ -- GXB_NC        : Unused GXB Transmitter or dedicated clock output pin. This pin
+ --                 must not be connected.
+ ---------------------------------------------------------------------------------
+
+
+
+ ---------------------------------------------------------------------------------
+ -- Pin directions (input, output or bidir) are based on device operating in user mode.
+ ---------------------------------------------------------------------------------
+
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+CHIP  "single"  ASSIGNED TO AN: 5CGXFC7C7F23C8
+
+Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
+-------------------------------------------------------------------------------------------------------------
+RREF                         : A1        :        :                   :         :           :                
+MSEL2                        : A2        :        :                   :         : 9A        :                
+VCCBAT                       : A3        : power  :                   : 1.2V    :           :                
+nCONFIG                      : A4        :        :                   :         : 9A        :                
+pPC[13]                      : A5        : output : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : A6        : power  :                   : 2.5V    : 8A        :                
+pPC[14]                      : A7        : output : 2.5 V             :         : 8A        : N              
+pPC[3]                       : A8        : output : 2.5 V             :         : 8A        : N              
+pNEXTPC[6]                   : A9        : output : 2.5 V             :         : 8A        : N              
+pALUout[21]                  : A10       : output : 2.5 V             :         : 8A        : N              
+GND                          : A11       : gnd    :                   :         :           :                
+pALUout[15]                  : A12       : output : 2.5 V             :         : 7A        : N              
+pNEXTPC[23]                  : A13       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[0]                  : A14       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[12]                 : A15       : output : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : A16       : power  :                   : 2.5V    : 7A        :                
+pALUout[25]                  : A17       : output : 2.5 V             :         : 7A        : N              
+pALUout[0]                   : A18       : output : 2.5 V             :         : 7A        : N              
+pWriteData[10]               : A19       : output : 2.5 V             :         : 7A        : N              
+pWriteData[12]               : A20       : output : 2.5 V             :         : 7A        : N              
+GND                          : A21       : gnd    :                   :         :           :                
+pNEXTPC[7]                   : A22       : output : 2.5 V             :         : 7A        : N              
+GND                          : AA1       :        :                   :         : B0L       :                
+GND                          : AA2       :        :                   :         : B0L       :                
+GND                          : AA3       : gnd    :                   :         :           :                
+GND                          : AA4       : gnd    :                   :         :           :                
+AS_DATA2, DATA2              : AA5       :        :                   :         : 3A        :                
+GND                          : AA6       : gnd    :                   :         :           :                
+pInstruction[30]             : AA7       : output : 2.5 V             :         : 3B        : N              
+pWriteData[3]                : AA8       : output : 2.5 V             :         : 3B        : N              
+pPC[31]                      : AA9       : output : 2.5 V             :         : 3B        : N              
+pMEM_out[2]                  : AA10      : output : 2.5 V             :         : 3B        : N              
+GND                          : AA11      : gnd    :                   :         :           :                
+pInstruction[4]              : AA12      : output : 2.5 V             :         : 3B        : N              
+pBranch                      : AA13      : output : 2.5 V             :         : 4A        : N              
+pPC[19]                      : AA14      : output : 2.5 V             :         : 4A        : N              
+pInstruction[14]             : AA15      : output : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AA16      : power  :                   : 2.5V    : 4A        :                
+pNEXTPC[5]                   : AA17      : output : 2.5 V             :         : 4A        : N              
+pWriteData[18]               : AA18      : output : 2.5 V             :         : 4A        : N              
+pWB[10]                      : AA19      : output : 2.5 V             :         : 4A        : N              
+pWB[24]                      : AA20      : output : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AA21      : power  :                   : 2.5V    : 4A        :                
+pWB[20]                      : AA22      : output : 2.5 V             :         : 4A        : N              
+GND                          : AB1       : gnd    :                   :         :           :                
+GND                          : AB2       : gnd    :                   :         :           :                
+AS_DATA1, DATA1              : AB3       :        :                   :         : 3A        :                
+AS_DATA0, ASDO, DATA0        : AB4       :        :                   :         : 3A        :                
+pInstruction[7]              : AB5       : output : 2.5 V             :         : 3B        : N              
+pNEXTPC[21]                  : AB6       : output : 2.5 V             :         : 3B        : N              
+pPC[15]                      : AB7       : output : 2.5 V             :         : 3B        : N              
+pALUout[6]                   : AB8       : output : 2.5 V             :         : 3B        : N              
+GND                          : AB9       : gnd    :                   :         :           :                
+pNEXTPC[2]                   : AB10      : output : 2.5 V             :         : 3B        : N              
+pPC[23]                      : AB11      : output : 2.5 V             :         : 3B        : N              
+pNEXTPC[26]                  : AB12      : output : 2.5 V             :         : 4A        : N              
+pInstruction[5]              : AB13      : output : 2.5 V             :         : 4A        : N              
+GND                          : AB14      : gnd    :                   :         :           :                
+pWB[17]                      : AB15      : output : 2.5 V             :         : 4A        : N              
+VREFB4AN0                    : AB16      : power  :                   :         : 4A        :                
+pWB[30]                      : AB17      : output : 2.5 V             :         : 4A        : N              
+pPC[8]                       : AB18      : output : 2.5 V             :         : 4A        : N              
+GND                          : AB19      : gnd    :                   :         :           :                
+pALUout[23]                  : AB20      : output : 2.5 V             :         : 4A        : N              
+pWB[13]                      : AB21      : output : 2.5 V             :         : 4A        : N              
+pALUout[22]                  : AB22      : output : 2.5 V             :         : 4A        : N              
+GND                          : B1        : gnd    :                   :         :           :                
+GND                          : B2        : gnd    :                   :         :           :                
+DNU                          : B3        :        :                   :         :           :                
+DNU                          : B4        :        :                   :         :           :                
+pNEXTPC[20]                  : B5        : output : 2.5 V             :         : 8A        : N              
+pInstruction[6]              : B6        : output : 2.5 V             :         : 8A        : N              
+pNEXTPC[24]                  : B7        : output : 2.5 V             :         : 8A        : N              
+VREFB8AN0                    : B8        : power  :                   :         : 8A        :                
+GND                          : B9        : gnd    :                   :         :           :                
+pPC[17]                      : B10       : output : 2.5 V             :         : 8A        : N              
+pPC[29]                      : B11       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[22]                 : B12       : output : 2.5 V             :         : 7A        : N              
+pNEXTPC[19]                  : B13       : output : 2.5 V             :         : 7A        : N              
+GND                          : B14       : gnd    :                   :         :           :                
+pWriteData[0]                : B15       : output : 2.5 V             :         : 7A        : N              
+pPC[1]                       : B16       : output : 2.5 V             :         : 7A        : N              
+pNEXTPC[1]                   : B17       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[23]                 : B18       : output : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : B19       : power  :                   : 2.5V    : 7A        :                
+pPC[0]                       : B20       : output : 2.5 V             :         : 7A        : N              
+pPC[28]                      : B21       : output : 2.5 V             :         : 7A        : N              
+pALUout[18]                  : B22       : output : 2.5 V             :         : 7A        : N              
+GND                          : C1        :        :                   :         : B1L       :                
+GND                          : C2        :        :                   :         : B1L       :                
+GND                          : C3        : gnd    :                   :         :           :                
+GND                          : C4        : gnd    :                   :         :           :                
+GND                          : C5        :        :                   :         : 9A        :                
+pMEM_out[26]                 : C6        : output : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : C7        : power  :                   : 2.5V    : 8A        :                
+pNEXTPC[25]                  : C8        : output : 2.5 V             :         : 8A        : N              
+pALUout[14]                  : C9        : output : 2.5 V             :         : 8A        : N              
+VCCPD7A8A                    : C10       : power  :                   : 2.5V    : 7A, 8A    :                
+pPC[24]                      : C11       : output : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : C12       : power  :                   : 2.5V    : 7A        :                
+pPC[20]                      : C13       : output : 2.5 V             :         : 7A        : N              
+VREFB7AN0                    : C14       : power  :                   :         : 7A        :                
+pMEM_out[9]                  : C15       : output : 2.5 V             :         : 7A        : N              
+pALUout[27]                  : C16       : output : 2.5 V             :         : 7A        : N              
+GND                          : C17       : gnd    :                   :         :           :                
+pWB[12]                      : C18       : output : 2.5 V             :         : 7A        : N              
+pWriteData[13]               : C19       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[30]                 : C20       : output : 2.5 V             :         : 7A        : N              
+pInstruction[25]             : C21       : output : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : C22       : power  :                   : 2.5V    : 7A        :                
+GND                          : D1        : gnd    :                   :         :           :                
+GND                          : D2        : gnd    :                   :         :           :                
+GXB_NC                       : D3        :        :                   :         : B1L       :                
+GXB_NC                       : D4        :        :                   :         : B1L       :                
+GND                          : D5        : gnd    :                   :         :           :                
+pMEM_out[19]                 : D6        : output : 2.5 V             :         : 8A        : N              
+pNEXTPC[0]                   : D7        : output : 2.5 V             :         : 8A        : N              
+VCCPD7A8A                    : D8        : power  :                   : 2.5V    : 7A, 8A    :                
+pPC[25]                      : D9        : output : 2.5 V             :         : 8A        : N              
+GND                          : D10       : gnd    :                   :         :           :                
+VCC_AUX                      : D11       : power  :                   : 2.5V    :           :                
+pNEXTPC[16]                  : D12       : output : 2.5 V             :         : 7A        : N              
+pNEXTPC[27]                  : D13       : output : 2.5 V             :         : 7A        : N              
+VCCPD7A8A                    : D14       : power  :                   : 2.5V    : 7A, 8A    :                
+VCCIO7A                      : D15       : power  :                   : 2.5V    : 7A        :                
+VCCPD7A8A                    : D16       : power  :                   : 2.5V    : 7A, 8A    :                
+pNEXTPC[3]                   : D17       : output : 2.5 V             :         : 7A        : N              
+VCC_AUX                      : D18       : power  :                   : 2.5V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D19       :        :                   :         : 7A        :                
+GND                          : D20       : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :         : 7A        :                
+pMEM_out[21]                 : D22       : output : 2.5 V             :         : 7A        : N              
+GXB_NC                       : E1        :        :                   :         : B1L       :                
+GXB_NC                       : E2        :        :                   :         : B1L       :                
+GND                          : E3        : gnd    :                   :         :           :                
+GND                          : E4        : gnd    :                   :         :           :                
+MSEL3                        : E5        :        :                   :         : 9A        :                
+VCC_AUX                      : E6        : power  :                   : 2.5V    :           :                
+pMEM_out[24]                 : E7        : output : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : E8        : power  :                   : 2.5V    : 8A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : E9        :        :                   :         : 8A        :                
+pNEXTPC[30]                  : E10       : output : 2.5 V             :         : 8A        : N              
+VCCPD7A8A                    : E11       : power  :                   : 2.5V    : 7A, 8A    :                
+pALUout[20]                  : E12       : output : 2.5 V             :         : 7A        : N              
+GND                          : E13       : gnd    :                   :         :           :                
+pPC[7]                       : E14       : output : 2.5 V             :         : 7A        : N              
+pWriteData[8]                : E15       : output : 2.5 V             :         : 7A        : N              
+pWriteData[19]               : E16       : output : 2.5 V             :         : 7A        : N              
+DNU                          : E17       :        :                   :         :           :                
+VCCIO7A                      : E18       : power  :                   : 2.5V    : 7A        :                
+pWriteData[14]               : E19       : output : 2.5 V             :         : 7A        : N              
+pWriteData[23]               : E20       : output : 2.5 V             :         : 7A        : N              
+pWriteData[21]               : E21       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[17]                 : E22       : output : 2.5 V             :         : 7A        : N              
+GND                          : F1        : gnd    :                   :         :           :                
+GND                          : F2        : gnd    :                   :         :           :                
+MSEL4                        : F3        :        :                   :         : 9A        :                
+VCCA_FPLL                    : F4        : power  :                   : 2.5V    :           :                
+GND                          : F5        :        :                   :         : B1L       :                
+GND                          : F6        : gnd    :                   :         :           :                
+pPC[2]                       : F7        : output : 2.5 V             :         : 8A        : N              
+VCCPGM                       : F8        : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
+pNEXTPC[15]                  : F9        : output : 2.5 V             :         : 8A        : N              
+pALUout[16]                  : F10       : output : 2.5 V             :         : 8A        : N              
+VCCIO7A                      : F11       : power  :                   : 2.5V    : 7A        :                
+pALUout[19]                  : F12       : output : 2.5 V             :         : 7A        : N              
+pALUout[5]                   : F13       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[27]                 : F14       : output : 2.5 V             :         : 7A        : N              
+pNEXTPC[8]                   : F15       : output : 2.5 V             :         : 7A        : N              
+GND                          : F16       : gnd    :                   :         :           :                
+GND                          : F17       :        :                   :         : 7A        :                
+pMEM_out[31]                 : F18       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[7]                  : F19       : output : 2.5 V             :         : 7A        : N              
+pInstruction[27]             : F20       : output : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : F21       : power  :                   : 2.5V    : 7A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : F22       :        :                   :         : 7A        :                
+GND                          : G1        :        :                   :         : B1L       :                
+GND                          : G2        :        :                   :         : B1L       :                
+GND                          : G3        : gnd    :                   :         :           :                
+GND                          : G4        :        :                   :         : B1L       :                
+nCE                          : G5        :        :                   :         : 9A        :                
+pMR                          : G6        : output : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : G7        : power  :                   : 2.5V    : 8A        :                
+pPC[30]                      : G8        : output : 2.5 V             :         : 8A        : N              
+GND                          : G9        : gnd    :                   :         :           :                
+pPC[18]                      : G10       : output : 2.5 V             :         : 8A        : N              
+pALUout[11]                  : G11       : output : 2.5 V             :         : 7A        : N              
+pPC[26]                      : G12       : output : 2.5 V             :         : 7A        : N              
+pClock                       : G13       : input  : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : G14       : power  :                   : 2.5V    : 7A        :                
+pWriteData[7]                : G15       : output : 2.5 V             :         : 7A        : N              
+pWriteData[6]                : G16       : output : 2.5 V             :         : 7A        : N              
+pWriteData[9]                : G17       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[3]                  : G18       : output : 2.5 V             :         : 7A        : N              
+GND                          : G19       : gnd    :                   :         :           :                
+pMEM_out[5]                  : G20       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : G21       :        :                   :         : 7A        :                
+pWriteData[11]               : G22       : output : 2.5 V             :         : 7A        : N              
+GND                          : H1        : gnd    :                   :         :           :                
+GND                          : H2        : gnd    :                   :         :           :                
+GND                          : H3        : gnd    :                   :         :           :                
+GND                          : H4        : gnd    :                   :         :           :                
+nSTATUS                      : H5        :        :                   :         : 9A        :                
+pPC[9]                       : H6        : output : 2.5 V             :         : 8A        : N              
+GND                          : H7        : gnd    :                   :         :           :                
+pNEXTPC[12]                  : H8        : output : 2.5 V             :         : 8A        : N              
+pNEXTPC[28]                  : H9        : output : 2.5 V             :         : 8A        : N              
+pPC[6]                       : H10       : output : 2.5 V             :         : 7A        : N              
+pPC[11]                      : H11       : output : 2.5 V             :         : 7A        : N              
+GND                          : H12       : gnd    :                   :         :           :                
+pALUout[31]                  : H13       : output : 2.5 V             :         : 7A        : N              
+pWriteData[16]               : H14       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : H15       :        :                   :         : 7A        :                
+pALUout[7]                   : H16       : output : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : H17       : power  :                   : 2.5V    : 7A        :                
+pMW                          : H18       : output : 2.5 V             :         : 7A        : N              
+VCCA_FPLL                    : H19       : power  :                   : 2.5V    :           :                
+pMEM_out[16]                 : H20       : output : 2.5 V             :         : 7A        : N              
+pWriteData[4]                : H21       : output : 2.5 V             :         : 7A        : N              
+GND                          : H22       : gnd    :                   :         :           :                
+GXB_NC                       : J1        :        :                   :         : B1L       :                
+GXB_NC                       : J2        :        :                   :         : B1L       :                
+GND                          : J3        : gnd    :                   :         :           :                
+VCCE_GXBL                    : J4        : power  :                   : 1.1V    :           :                
+GND                          : J5        : gnd    :                   :         :           :                
+MSEL1                        : J6        :        :                   :         : 9A        :                
+pNEXTPC[17]                  : J7        : output : 2.5 V             :         : 8A        : N              
+pNEXTPC[29]                  : J8        : output : 2.5 V             :         : 8A        : N              
+pALUout[29]                  : J9        : output : 2.5 V             :         : 8A        : N              
+VCC                          : J10       : power  :                   : 1.1V    :           :                
+pPC[21]                      : J11       : output : 2.5 V             :         : 7A        : N              
+VCC                          : J12       : power  :                   : 1.1V    :           :                
+pWB[9]                       : J13       : output : 2.5 V             :         : 7A        : N              
+VCC                          : J14       : power  :                   : 1.1V    :           :                
+GND                          : J15       : gnd    :                   :         :           :                
+VCC                          : J16       : power  :                   : 1.1V    :           :                
+pWriteData[1]                : J17       : output : 2.5 V             :         : 7A        : N              
+pWriteData[17]               : J18       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[4]                  : J19       : output : 2.5 V             :         : 7A        : N              
+GND                          : J20       : gnd    :                   :         :           :                
+pMEM_out[18]                 : J21       : output : 2.5 V             :         : 7A        : N              
+pALUout[24]                  : J22       : output : 2.5 V             :         : 7A        : N              
+GND                          : K1        : gnd    :                   :         :           :                
+GND                          : K2        : gnd    :                   :         :           :                
+VCCL_GXBL                    : K3        : power  :                   : 1.1V    :           :                
+GND                          : K4        : gnd    :                   :         :           :                
+VCCE_GXBL                    : K5        : power  :                   : 1.1V    :           :                
+CONF_DONE                    : K6        :        :                   :         : 9A        :                
+pNEXTPC[22]                  : K7        : output : 2.5 V             :         : 8A        : N              
+GND                          : K8        : gnd    :                   :         :           :                
+pPC[16]                      : K9        : output : 2.5 V             :         : 7A        : N              
+GND                          : K10       : gnd    :                   :         :           :                
+VCC                          : K11       : power  :                   : 1.1V    :           :                
+GND                          : K12       : gnd    :                   :         :           :                
+VCC                          : K13       : power  :                   : 1.1V    :           :                
+GND                          : K14       : gnd    :                   :         :           :                
+VCC                          : K15       : power  :                   : 1.1V    :           :                
+pWriteData[15]               : K16       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[28]                 : K17       : output : 2.5 V             :         : 5B        : N              
+VCCIO5B                      : K18       : power  :                   : 2.5V    : 5B        :                
+pALUout[30]                  : K19       : output : 2.5 V             :         : 7A        : N              
+pALUout[12]                  : K20       : output : 2.5 V             :         : 7A        : N              
+pMEM_out[1]                  : K21       : output : 2.5 V             :         : 5B        : N              
+pMEM_out[11]                 : K22       : output : 2.5 V             :         : 5B        : N              
+GND                          : L1        :        :                   :         : B1L       :                
+GND                          : L2        :        :                   :         : B1L       :                
+GND                          : L3        : gnd    :                   :         :           :                
+VCCE_GXBL                    : L4        : power  :                   : 1.1V    :           :                
+GND                          : L5        : gnd    :                   :         :           :                
+MSEL0                        : L6        :        :                   :         : 9A        :                
+pPC[10]                      : L7        : output : 2.5 V             :         : 8A        : N              
+pPC[22]                      : L8        : output : 2.5 V             :         : 7A        : N              
+DNU                          : L9        :        :                   :         :           :                
+VCC                          : L10       : power  :                   : 1.1V    :           :                
+GND                          : L11       : gnd    :                   :         :           :                
+VCC                          : L12       : power  :                   : 1.1V    :           :                
+GND                          : L13       : gnd    :                   :         :           :                
+VCC                          : L14       : power  :                   : 1.1V    :           :                
+GND                          : L15       : gnd    :                   :         :           :                
+VCC                          : L16       : power  :                   : 1.1V    :           :                
+pMEM_out[29]                 : L17       : output : 2.5 V             :         : 5B        : N              
+pM2R                         : L18       : output : 2.5 V             :         : 5B        : N              
+pALUout[3]                   : L19       : output : 2.5 V             :         : 5B        : N              
+VREFB5BN0                    : L20       : power  :                   :         : 5B        :                
+GND                          : L21       : gnd    :                   :         :           :                
+pMEM_out[6]                  : L22       : output : 2.5 V             :         : 5B        : N              
+GND                          : M1        : gnd    :                   :         :           :                
+GND                          : M2        : gnd    :                   :         :           :                
+VCCH_GXBL                    : M3        : power  :                   : 2.5V    :           :                
+GND                          : M4        : gnd    :                   :         :           :                
+TDO                          : M5        : output :                   :         : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : M6        :        :                   :         : 3A        :                
+pWriteData[30]               : M7        : output : 2.5 V             :         : 3A        : N              
+pALUout[17]                  : M8        : output : 2.5 V             :         : 3B        : N              
+pALUout[26]                  : M9        : output : 2.5 V             :         : 3B        : N              
+GND                          : M10       : gnd    :                   :         :           :                
+VCC                          : M11       : power  :                   : 1.1V    :           :                
+GND                          : M12       : gnd    :                   :         :           :                
+VCC                          : M13       : power  :                   : 1.1V    :           :                
+GND                          : M14       : gnd    :                   :         :           :                
+VCC                          : M15       : power  :                   : 1.1V    :           :                
+pWB[0]                       : M16       : output : 2.5 V             :         : 5B        : N              
+VCCPD5B                      : M17       : power  :                   : 2.5V    : 5B        :                
+pMEM_out[13]                 : M18       : output : 2.5 V             :         : 5B        : N              
+VCCIO5B                      : M19       : power  :                   : 2.5V    : 5B        :                
+pInstruction[23]             : M20       : output : 2.5 V             :         : 5B        : N              
+pWriteData[26]               : M21       : output : 2.5 V             :         : 5B        : N              
+pMEM_out[20]                 : M22       : output : 2.5 V             :         : 5B        : N              
+GXB_NC                       : N1        :        :                   :         : B0L       :                
+GXB_NC                       : N2        :        :                   :         : B0L       :                
+GND                          : N3        : gnd    :                   :         :           :                
+VCCE_GXBL                    : N4        : power  :                   : 1.1V    :           :                
+GND                          : N5        : gnd    :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : N6        :        :                   :         : 3A        :                
+GND                          : N7        : gnd    :                   :         :           :                
+pNEXTPC[10]                  : N8        : output : 2.5 V             :         : 3B        : N              
+pALUout[2]                   : N9        : output : 2.5 V             :         : 3B        : N              
+VCC                          : N10       : power  :                   : 1.1V    :           :                
+GND                          : N11       : gnd    :                   :         :           :                
+VCC                          : N12       : power  :                   : 1.1V    :           :                
+GND                          : N13       : gnd    :                   :         :           :                
+VCC                          : N14       : power  :                   : 1.1V    :           :                
+GND                          : N15       : gnd    :                   :         :           :                
+pInstruction[8]              : N16       : output : 2.5 V             :         : 5B        : N              
+GND                          : N17       : gnd    :                   :         :           :                
+VCCPD5B                      : N18       : power  :                   : 2.5V    : 5B        :                
+pMEM_out[14]                 : N19       : output : 2.5 V             :         : 5B        : N              
+pInstruction[26]             : N20       : output : 2.5 V             :         : 5B        : N              
+pInstruction[13]             : N21       : output : 2.5 V             :         : 5B        : N              
+GND                          : N22       : gnd    :                   :         :           :                
+GND                          : P1        : gnd    :                   :         :           :                
+GND                          : P2        : gnd    :                   :         :           :                
+VCCL_GXBL                    : P3        : power  :                   : 1.1V    :           :                
+GND                          : P4        : gnd    :                   :         :           :                
+TMS                          : P5        : input  :                   :         : 3A        :                
+pWriteData[31]               : P6        : output : 2.5 V             :         : 3A        : N              
+pNEXTPC[9]                   : P7        : output : 2.5 V             :         : 3A        : N              
+pNEXTPC[13]                  : P8        : output : 2.5 V             :         : 3B        : N              
+pInstruction[12]             : P9        : output : 2.5 V             :         : 3B        : N              
+GND                          : P10       : gnd    :                   :         :           :                
+VCC                          : P11       : power  :                   : 1.1V    :           :                
+pNEXTPC[14]                  : P12       : output : 2.5 V             :         : 3B        : N              
+VCC                          : P13       : power  :                   : 1.1V    :           :                
+pWB[3]                       : P14       : output : 2.5 V             :         : 4A        : N              
+VCC                          : P15       : power  :                   : 1.1V    :           :                
+pInstruction[16]             : P16       : output : 2.5 V             :         : 5A        : N              
+pInstruction[22]             : P17       : output : 2.5 V             :         : 5A        : N              
+pInstruction[17]             : P18       : output : 2.5 V             :         : 5A        : N              
+pInstruction[21]             : P19       : output : 2.5 V             :         : 5A        : N              
+VCCIO5A                      : P20       : power  :                   : 2.5V    : 5A        :                
+VCCPD5A                      : P21       : power  :                   : 2.5V    : 5A        :                
+pInstruction[19]             : P22       : output : 2.5 V             :         : 5A        : N              
+GND                          : R1        :        :                   :         : B0L       :                
+GND                          : R2        :        :                   :         : B0L       :                
+GND                          : R3        : gnd    :                   :         :           :                
+nCSO, DATA4                  : R4        :        :                   :         : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : R5        :        :                   :         : 3A        :                
+pWriteData[24]               : R6        : output : 2.5 V             :         : 3A        : N              
+pNEXTPC[18]                  : R7        : output : 2.5 V             :         : 3A        : N              
+VCCIO3B                      : R8        : power  :                   : 2.5V    : 3B        :                
+pPC[4]                       : R9        : output : 2.5 V             :         : 3B        : N              
+pInstruction[0]              : R10       : output : 2.5 V             :         : 3B        : N              
+pPC[27]                      : R11       : output : 2.5 V             :         : 3B        : N              
+pPC[5]                       : R12       : output : 2.5 V             :         : 3B        : N              
+GND                          : R13       : gnd    :                   :         :           :                
+pWB[26]                      : R14       : output : 2.5 V             :         : 4A        : N              
+pWB[25]                      : R15       : output : 2.5 V             :         : 5A        : N              
+pWB[8]                       : R16       : output : 2.5 V             :         : 5A        : N              
+pALUout[1]                   : R17       : output : 2.5 V             :         : 5A        : N              
+VCCIO5A                      : R18       : power  :                   : 2.5V    : 5A        :                
+VCCPGM                       : R19       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
+VREFB5AN0                    : R20       : power  :                   :         : 5A        :                
+pReset                       : R21       : input  : 2.5 V             :         : 5A        : N              
+pWB[6]                       : R22       : output : 2.5 V             :         : 5A        : N              
+GND                          : T1        : gnd    :                   :         :           :                
+GND                          : T2        : gnd    :                   :         :           :                
+VCCH_GXBL                    : T3        : power  :                   : 2.5V    :           :                
+AS_DATA3, DATA3              : T4        :        :                   :         : 3A        :                
+VCCA_FPLL                    : T5        : power  :                   : 2.5V    :           :                
+VCCIO3A                      : T6        : power  :                   : 2.5V    : 3A        :                
+pWriteData[29]               : T7        : output : 2.5 V             :         : 3A        : N              
+pInstruction[9]              : T8        : output : 2.5 V             :         : 3A        : N              
+pALUout[13]                  : T9        : output : 2.5 V             :         : 3B        : N              
+pNEXTPC[4]                   : T10       : output : 2.5 V             :         : 3B        : N              
+VCCIO3B                      : T11       : power  :                   : 2.5V    : 3B        :                
+pInstruction[24]             : T12       : output : 2.5 V             :         : 4A        : N              
+pNEXTPC[11]                  : T13       : output : 2.5 V             :         : 4A        : N              
+pWB[16]                      : T14       : output : 2.5 V             :         : 4A        : N              
+pWB[7]                       : T15       : output : 2.5 V             :         : 5A        : N              
+GND                          : T16       : gnd    :                   :         :           :                
+pALUout[4]                   : T17       : output : 2.5 V             :         : 5A        : N              
+pMEM_out[8]                  : T18       : output : 2.5 V             :         : 5A        : N              
+pMEM_out[10]                 : T19       : output : 2.5 V             :         : 5A        : N              
+pWriteData[28]               : T20       : output : 2.5 V             :         : 5A        : N              
+GND                          : T21       : gnd    :                   :         :           :                
+pWB[4]                       : T22       : output : 2.5 V             :         : 5A        : N              
+GXB_NC                       : U1        :        :                   :         : B0L       :                
+GXB_NC                       : U2        :        :                   :         : B0L       :                
+GND                          : U3        : gnd    :                   :         :           :                
+GND                          : U4        :        :                   :         : B0L       :                
+GND                          : U5        : gnd    :                   :         :           :                
+pWriteData[5]                : U6        : output : 2.5 V             :         : 3A        : N              
+pALUout[28]                  : U7        : output : 2.5 V             :         : 3A        : N              
+pInstruction[28]             : U8        : output : 2.5 V             :         : 3A        : N              
+GND                          : U9        : gnd    :                   :         :           :                
+pALUout[10]                  : U10       : output : 2.5 V             :         : 3B        : N              
+pWB[22]                      : U11       : output : 2.5 V             :         : 3B        : N              
+pWriteData[2]                : U12       : output : 2.5 V             :         : 3B        : N              
+pInstruction[2]              : U13       : output : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : U14       : power  :                   : 2.5V    : 4A        :                
+pWB[23]                      : U15       : output : 2.5 V             :         : 4A        : N              
+pWB[27]                      : U16       : output : 2.5 V             :         : 4A        : N              
+pMEM_out[25]                 : U17       : output : 2.5 V             :         : 4A        : N              
+VCCA_FPLL                    : U18       : power  :                   : 2.5V    :           :                
+VCCIO4A                      : U19       : power  :                   : 2.5V    : 4A        :                
+pWB[2]                       : U20       : output : 2.5 V             :         : 4A        : N              
+pMEM_out[15]                 : U21       : output : 2.5 V             :         : 4A        : N              
+pALUout[8]                   : U22       : output : 2.5 V             :         : 4A        : N              
+GND                          : V1        : gnd    :                   :         :           :                
+GND                          : V2        : gnd    :                   :         :           :                
+DCLK                         : V3        :        :                   :         : 3A        :                
+GND                          : V4        :        :                   :         : B0L       :                
+TCK                          : V5        : input  :                   :         : 3A        :                
+pWriteData[20]               : V6        : output : 2.5 V             :         : 3A        : N              
+GND                          : V7        : gnd    :                   :         :           :                
+VCCPGM                       : V8        : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
+pWriteData[22]               : V9        : output : 2.5 V             :         : 3B        : N              
+pNEXTPC[31]                  : V10       : output : 2.5 V             :         : 3B        : N              
+DNU                          : V11       :        :                   :         :           :                
+GND                          : V12       : gnd    :                   :         :           :                
+pInstruction[11]             : V13       : output : 2.5 V             :         : 4A        : N              
+pInstruction[15]             : V14       : output : 2.5 V             :         : 4A        : N              
+pWB[29]                      : V15       : output : 2.5 V             :         : 4A        : N              
+pWB[14]                      : V16       : output : 2.5 V             :         : 4A        : N              
+GND                          : V17       : gnd    :                   :         :           :                
+pWB[5]                       : V18       : output : 2.5 V             :         : 4A        : N              
+pALUout[9]                   : V19       : output : 2.5 V             :         : 4A        : N              
+pInstruction[18]             : V20       : output : 2.5 V             :         : 4A        : N              
+pWB[28]                      : V21       : output : 2.5 V             :         : 4A        : N              
+GND                          : V22       : gnd    :                   :         :           :                
+GND                          : W1        :        :                   :         : B0L       :                
+GND                          : W2        :        :                   :         : B0L       :                
+GND                          : W3        : gnd    :                   :         :           :                
+GND                          : W4        : gnd    :                   :         :           :                
+TDI                          : W5        : input  :                   :         : 3A        :                
+VCCPD3A                      : W6        : power  :                   : 2.5V    : 3A        :                
+VCC_AUX                      : W7        : power  :                   : 2.5V    :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : W8        :        :                   :         : 3A        :                
+pPC[12]                      : W9        : output : 2.5 V             :         : 3A        : N              
+VCCIO3B                      : W10       : power  :                   : 2.5V    : 3B        :                
+VCCPD3B4A                    : W11       : power  :                   : 2.5V    : 3B, 4A    :                
+VCCPD3B4A                    : W12       : power  :                   : 2.5V    : 3B, 4A    :                
+VCC_AUX                      : W13       : power  :                   : 2.5V    :           :                
+VCCPD3B4A                    : W14       : power  :                   : 2.5V    : 3B, 4A    :                
+VCCIO4A                      : W15       : power  :                   : 2.5V    : 4A        :                
+pWB[21]                      : W16       : output : 2.5 V             :         : 4A        : N              
+VCCPD3B4A                    : W17       : power  :                   : 2.5V    : 3B, 4A    :                
+VCC_AUX                      : W18       : power  :                   : 2.5V    :           :                
+pInstruction[10]             : W19       : output : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : W20       : power  :                   : 2.5V    : 4A        :                
+pWB[31]                      : W21       : output : 2.5 V             :         : 4A        : N              
+pWB[18]                      : W22       : output : 2.5 V             :         : 4A        : N              
+GND                          : Y1        : gnd    :                   :         :           :                
+GND                          : Y2        : gnd    :                   :         :           :                
+GXB_NC                       : Y3        :        :                   :         : B0L       :                
+GXB_NC                       : Y4        :        :                   :         : B0L       :                
+GND                          : Y5        : gnd    :                   :         :           :                
+DNU                          : Y6        :        :                   :         :           :                
+VREFB3AN0                    : Y7        : power  :                   :         : 3A        :                
+VCCIO3A                      : Y8        : power  :                   : 2.5V    : 3A        :                
+pInstruction[1]              : Y9        : output : 2.5 V             :         : 3B        : N              
+pInstruction[20]             : Y10       : output : 2.5 V             :         : 3B        : N              
+pInstruction[31]             : Y11       : output : 2.5 V             :         : 3B        : N              
+VREFB3BN0                    : Y12       : power  :                   :         : 3B        :                
+VCCIO3B                      : Y13       : power  :                   : 2.5V    : 3B        :                
+pWB[19]                      : Y14       : output : 2.5 V             :         : 4A        : N              
+pInstruction[29]             : Y15       : output : 2.5 V             :         : 4A        : N              
+pWB[11]                      : Y16       : output : 2.5 V             :         : 4A        : N              
+pWB[15]                      : Y17       : output : 2.5 V             :         : 4A        : N              
+GND                          : Y18       : gnd    :                   :         :           :                
+pInstruction[3]              : Y19       : output : 2.5 V             :         : 4A        : N              
+pWB[1]                       : Y20       : output : 2.5 V             :         : 4A        : N              
+pWriteData[25]               : Y21       : output : 2.5 V             :         : 4A        : N              
+pWriteData[27]               : Y22       : output : 2.5 V             :         : 4A        : N              

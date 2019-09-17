@@ -1,0 +1,297 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 600 376 792 392)
+	(text "INPUT" (rect 149 0 177 10)(font "Arial" (font_size 6)))
+	(text "pYeshiData2[31..0]" (rect 5 0 101 12)(font "Arial" ))
+	(pt 192 8)
+	(drawing
+		(line (pt 108 12)(pt 133 12))
+		(line (pt 108 4)(pt 133 4))
+		(line (pt 137 8)(pt 192 8))
+		(line (pt 108 12)(pt 108 4))
+		(line (pt 133 4)(pt 137 8))
+		(line (pt 133 12)(pt 137 8))
+	)
+	(text "VCC" (rect 152 7 172 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 600 232 784 248)
+	(text "INPUT" (rect 141 0 169 10)(font "Arial" (font_size 6)))
+	(text "pYeshiData[31..0]" (rect 5 0 88 17)(font "Intel Clear" ))
+	(pt 184 8)
+	(drawing
+		(line (pt 100 12)(pt 125 12))
+		(line (pt 100 4)(pt 125 4))
+		(line (pt 129 8)(pt 184 8))
+		(line (pt 100 12)(pt 100 4))
+		(line (pt 125 4)(pt 129 8))
+		(line (pt 125 12)(pt 129 8))
+	)
+	(text "VCC" (rect 144 7 164 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 600 184 768 200)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "pYeshiSignal" (rect 5 0 69 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(symbol
+	(rect 112 176 216 240)
+	(text "CARRY_SUM" (rect 20 0 96 14)(font "Arial" (font_size 8)))
+	(text "inst" (rect 3 52 20 64)(font "Arial" ))
+	(port
+		(pt 0 24)
+		(input)
+		(text "sin" (rect 20 18 36 32)(font "Arial" (font_size 8)))
+		(text "sin" (rect 20 18 36 32)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 16 24))
+	)
+	(port
+		(pt 0 40)
+		(input)
+		(text "cin" (rect 20 32 36 46)(font "Arial" (font_size 8)))
+		(text "cin" (rect 20 32 36 46)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 104 24)
+		(output)
+		(text "sout" (rect 64 17 88 31)(font "Arial" (font_size 8)))
+		(text "sout" (rect 63 17 87 31)(font "Arial" (font_size 8)))
+		(line (pt 88 24)(pt 104 24))
+	)
+	(port
+		(pt 104 40)
+		(output)
+		(text "cout" (rect 64 32 88 46)(font "Arial" (font_size 8)))
+		(text "cout" (rect 63 32 87 46)(font "Arial" (font_size 8)))
+		(line (pt 88 40)(pt 104 40))
+	)
+	(drawing
+		(line (pt 16 48)(pt 88 48))
+		(line (pt 16 16)(pt 88 16))
+		(line (pt 16 48)(pt 16 16))
+		(line (pt 88 48)(pt 88 16))
+	)
+)
+(symbol
+	(rect 112 296 216 360)
+	(text "CARRY_SUM" (rect 20 50 96 64)(font "Arial" (font_size 8)))
+	(text "inst5" (rect 3 -5 25 12)(font "Intel Clear" ))
+	(port
+		(pt 0 40)
+		(input)
+		(text "sin" (rect 20 18 36 32)(font "Arial" (font_size 8)))
+		(text "sin" (rect 20 32 36 46)(font "Arial" (font_size 8)))
+		(line (pt 0 40)(pt 16 40))
+	)
+	(port
+		(pt 0 24)
+		(input)
+		(text "cin" (rect 20 32 36 46)(font "Arial" (font_size 8)))
+		(text "cin" (rect 20 18 36 32)(font "Arial" (font_size 8)))
+		(line (pt 0 24)(pt 16 24))
+	)
+	(port
+		(pt 104 40)
+		(output)
+		(text "sout" (rect 64 17 88 31)(font "Arial" (font_size 8)))
+		(text "sout" (rect 63 33 87 47)(font "Arial" (font_size 8)))
+		(line (pt 88 40)(pt 104 40))
+	)
+	(port
+		(pt 104 24)
+		(output)
+		(text "cout" (rect 64 32 88 46)(font "Arial" (font_size 8)))
+		(text "cout" (rect 63 18 87 32)(font "Arial" (font_size 8)))
+		(line (pt 88 24)(pt 104 24))
+	)
+	(drawing
+		(line (pt 16 16)(pt 88 16))
+		(line (pt 16 48)(pt 88 48))
+		(line (pt 16 16)(pt 16 48))
+		(line (pt 88 16)(pt 88 48))
+	)
+	(flipx)
+)
+(symbol
+	(rect 280 176 384 240)
+	(text "CARRY_SUM" (rect 8 0 84 14)(font "Arial" (font_size 8)))
+	(text "inst6" (rect 79 52 101 69)(font "Intel Clear" ))
+	(port
+		(pt 104 24)
+		(input)
+		(text "sin" (rect 20 18 36 32)(font "Arial" (font_size 8)))
+		(text "sin" (rect 68 18 84 32)(font "Arial" (font_size 8)))
+		(line (pt 104 24)(pt 88 24))
+	)
+	(port
+		(pt 104 40)
+		(input)
+		(text "cin" (rect 20 32 36 46)(font "Arial" (font_size 8)))
+		(text "cin" (rect 68 32 84 46)(font "Arial" (font_size 8)))
+		(line (pt 104 40)(pt 88 40))
+	)
+	(port
+		(pt 0 24)
+		(output)
+		(text "sout" (rect 64 17 88 31)(font "Arial" (font_size 8)))
+		(text "sout" (rect 17 17 41 31)(font "Arial" (font_size 8)))
+		(line (pt 16 24)(pt 0 24))
+	)
+	(port
+		(pt 0 40)
+		(output)
+		(text "cout" (rect 64 32 88 46)(font "Arial" (font_size 8)))
+		(text "cout" (rect 17 32 41 46)(font "Arial" (font_size 8)))
+		(line (pt 16 40)(pt 0 40))
+	)
+	(drawing
+		(line (pt 88 48)(pt 16 48))
+		(line (pt 88 16)(pt 16 16))
+		(line (pt 88 48)(pt 88 16))
+		(line (pt 16 48)(pt 16 16))
+	)
+	(flipy)
+)
+(symbol
+	(rect 728 520 792 568)
+	(text "AND2" (rect 1 0 25 10)(font "Arial" (font_size 6)))
+	(text "inst" (rect 3 37 20 49)(font "Arial" ))
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 42 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 14 12)(pt 30 12))
+		(line (pt 14 37)(pt 31 37))
+		(line (pt 14 12)(pt 14 37))
+		(arc (pt 31 37)(pt 30 12)(rect 18 12 43 37))
+	)
+)
+(connector
+	(pt 824 192)
+	(pt 824 216)
+)
+(connector
+	(pt 824 216)
+	(pt 880 216)
+)
+(connector
+	(pt 768 192)
+	(pt 824 192)
+)
+(connector
+	(pt 824 192)
+	(pt 880 192)
+)
+(connector
+	(pt 824 240)
+	(pt 824 264)
+	(bus)
+)
+(connector
+	(pt 824 264)
+	(pt 880 264)
+	(bus)
+)
+(connector
+	(pt 784 240)
+	(pt 824 240)
+	(bus)
+)
+(connector
+	(pt 824 240)
+	(pt 880 240)
+	(bus)
+)
+(connector
+	(text "sYeshiData[31..0]" (rect 810 368 892 385)(font "Intel Clear" ))
+	(pt 792 384)
+	(pt 880 384)
+	(bus)
+)
+(connector
+	(text "sYeshiData[31..16]" (rect 619 520 707 537)(font "Intel Clear" ))
+	(pt 616 536)
+	(pt 728 536)
+	(bus)
+)
+(connector
+	(text "sYeshiData[15..0]" (rect 624 536 706 553)(font "Intel Clear" ))
+	(pt 616 552)
+	(pt 728 552)
+	(bus)
+)
+(connector
+	(pt 792 544)
+	(pt 880 544)
+	(bus)
+)
+(junction (pt 824 192))
+(junction (pt 824 240))
+(text "Note 1. Flip symbols" (rect 112 72 233 91)(font "Intel Clear" (font_size 8)))
+(text "Right click on symbol -> Select 'flip horizontal' or 'flip vertical'" (rect 112 112 474 131)(font "Intel Clear" (font_size 8)))
+(text "Original:" (rect 112 152 160 171)(font "Intel Clear" (font_size 8)))
+(text "Flipped(horizontally):" (rect 280 152 403 171)(font "Intel Clear" (font_size 8)))
+(text "Flipped(vertically):" (rect 112 272 221 291)(font "Intel Clear" (font_size 8)))
+(text "- Blue line is for input, purple line is for output." (rect 112 384 385 403)(font "Intel Clear" (font_size 8)))
+(text "- You may flip MUXs for better visibility." (rect 112 424 350 443)(font "Intel Clear" (font_size 8)))
+(text "Note 2. Output distribution" (rect 600 80 759 99)(font "Intel Clear" (font_size 8)))
+(text "You can connect lines to distribute data or control signals" (rect 600 120 935 139)(font "Intel Clear" (font_size 8)))
+(text "You can tag a name for line(or its segment)" (rect 600 312 851 331)(font "Intel Clear" (font_size 8)))
+(text "Click(select) line segment -> just type the name" (rect 600 344 879 363)(font "Intel Clear" (font_size 8)))
+(text "You can tag same name for data distribution" (rect 600 480 863 499)(font "Intel Clear" (font_size 8)))
+(text "This file is not a part of top-level entity(single.bdf). Any modification of this file will not be affected during compilation." (rect 112 16 811 35)(font "Intel Clear" (font_size 8)))
+(text "- You should use this feature for establishing instruction datapath." (rect 600 584 987 603)(font "Intel Clear" (font_size 8)))
+(text "- This is possible and safe unless you tag two or more output line with same text." (rect 600 616 1074 635)(font "Intel Clear" (font_size 8)))
+(text "- You can move the tag. Click the textbox and use arrow keys." (rect 600 408 958 427)(font "Intel Clear" (font_size 8)))

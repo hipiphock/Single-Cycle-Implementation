@@ -1,0 +1,663 @@
+Analysis & Synthesis report for single
+Tue May 28 18:55:36 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Source assignments for eImem:inst3|LPM_ROM:data_memory|altrom:srom|altsyncram:rom_block|altsyncram_l961:auto_generated
+ 13. Source assignments for eDmem:inst5|LPM_RAM_DQ:data_memory|altram:sram|altsyncram:ram_block|altsyncram_8sf1:auto_generated
+ 14. Parameter Settings for User Entity Instance: eImem:inst3|LPM_ROM:data_memory
+ 15. Parameter Settings for User Entity Instance: eDmem:inst5|LPM_RAM_DQ:data_memory
+ 16. Post-Synthesis Netlist Statistics for Top Partition
+ 17. Elapsed Time Per Partition
+ 18. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Tue May 28 18:55:36 2019       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; single                                      ;
+; Top-level Entity Name           ; single                                      ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 510                                         ;
+; Total pins                      ; 230                                         ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 16,384                                      ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; single             ; single             ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Type of Retiming Performed During Resynthesis                                   ; Full               ;                    ;
+; Resynthesis Optimization Effort                                                 ; Normal             ;                    ;
+; Physical Synthesis Level for Resynthesis                                        ; Normal             ;                    ;
+; Use Generated Physical Constraints File                                         ; On                 ;                    ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                 ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                                                                       ; Library ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+; imem.mif                         ; yes             ; User Memory Initialization File    ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/imem.mif               ;         ;
+; dmem.mif                         ; yes             ; User Memory Initialization File    ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/dmem.mif               ;         ;
+; ePC.vhd                          ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/ePC.vhd                ;         ;
+; eSignExtend.vhd                  ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eSignExtend.vhd        ;         ;
+; eShiftAdder.vhd                  ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eShiftAdder.vhd        ;         ;
+; eRegFile.vhd                     ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eRegFile.vhd           ;         ;
+; eMUX32.vhd                       ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eMUX32.vhd             ;         ;
+; eMUX5.vhd                        ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eMUX5.vhd              ;         ;
+; eImem.vhd                        ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eImem.vhd              ;         ;
+; eDmem.vhd                        ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd              ;         ;
+; eControl.vhd                     ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eControl.vhd           ;         ;
+; eALU.vhd                         ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eALU.vhd               ;         ;
+; eAdd4.vhd                        ; yes             ; User VHDL File                     ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eAdd4.vhd              ;         ;
+; single.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/single.bdf             ;         ;
+; lpm_rom.tdf                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf                                                 ;         ;
+; altrom.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                  ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                              ;         ;
+; altrom.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.tdf                                                  ;         ;
+; memmodes.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/memmodes.inc                                              ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                              ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                 ;         ;
+; altsyncram.inc                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.inc                                              ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                              ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                       ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                               ;         ;
+; altram.inc                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                  ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                ;         ;
+; db/altsyncram_l961.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/db/altsyncram_l961.tdf ;         ;
+; lpm_ram_dq.tdf                   ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_ram_dq.tdf                                              ;         ;
+; altram.tdf                       ; yes             ; Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.tdf                                                  ;         ;
+; db/altsyncram_8sf1.tdf           ; yes             ; Auto-Generated Megafunction        ; C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/db/altsyncram_8sf1.tdf ;         ;
++----------------------------------+-----------------+------------------------------------+--------------------------------------------------------------------------------------------------------------------+---------+
+
+
++------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                ;
++---------------------------------------------+--------------+
+; Resource                                    ; Usage        ;
++---------------------------------------------+--------------+
+; Estimate of Logic utilization (ALMs needed) ; 576          ;
+;                                             ;              ;
+; Combinational ALUT usage for logic          ; 690          ;
+;     -- 7 input functions                    ; 0            ;
+;     -- 6 input functions                    ; 412          ;
+;     -- 5 input functions                    ; 91           ;
+;     -- 4 input functions                    ; 73           ;
+;     -- <=3 input functions                  ; 114          ;
+;                                             ;              ;
+; Dedicated logic registers                   ; 510          ;
+;                                             ;              ;
+; I/O pins                                    ; 230          ;
+; Total MLAB memory bits                      ; 0            ;
+; Total block memory bits                     ; 16384        ;
+;                                             ;              ;
+; Total DSP Blocks                            ; 0            ;
+;                                             ;              ;
+; Maximum fan-out node                        ; pClock~input ;
+; Maximum fan-out                             ; 574          ;
+; Total fan-out                               ; 6452         ;
+; Average fan-out                             ; 3.74         ;
++---------------------------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                    ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                        ; Entity Name     ; Library Name ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+; |single                                         ; 690 (0)             ; 510 (0)                   ; 16384             ; 0          ; 230  ; 0            ; |single                                                                                                    ; single          ; work         ;
+;    |eALU:inst6|                                 ; 142 (142)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |single|eALU:inst6                                                                                         ; eALU            ; work         ;
+;    |eAdd4:inst8|                                ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |single|eAdd4:inst8                                                                                        ; eAdd4           ; work         ;
+;    |eControl:inst2|                             ; 8 (8)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |single|eControl:inst2                                                                                     ; eControl        ; work         ;
+;    |eDmem:inst5|                                ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |single|eDmem:inst5                                                                                        ; eDmem           ; work         ;
+;       |lpm_ram_dq:data_memory|                  ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |single|eDmem:inst5|lpm_ram_dq:data_memory                                                                 ; lpm_ram_dq      ; work         ;
+;          |altram:sram|                          ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |single|eDmem:inst5|lpm_ram_dq:data_memory|altram:sram                                                     ; altram          ; work         ;
+;             |altsyncram:ram_block|              ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |single|eDmem:inst5|lpm_ram_dq:data_memory|altram:sram|altsyncram:ram_block                                ; altsyncram      ; work         ;
+;                |altsyncram_8sf1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |single|eDmem:inst5|lpm_ram_dq:data_memory|altram:sram|altsyncram:ram_block|altsyncram_8sf1:auto_generated ; altsyncram_8sf1 ; work         ;
+;    |eImem:inst3|                                ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |single|eImem:inst3                                                                                        ; eImem           ; work         ;
+;       |lpm_rom:data_memory|                     ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |single|eImem:inst3|lpm_rom:data_memory                                                                    ; lpm_rom         ; work         ;
+;          |altrom:srom|                          ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |single|eImem:inst3|lpm_rom:data_memory|altrom:srom                                                        ; altrom          ; work         ;
+;             |altsyncram:rom_block|              ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |single|eImem:inst3|lpm_rom:data_memory|altrom:srom|altsyncram:rom_block                                   ; altsyncram      ; work         ;
+;                |altsyncram_l961:auto_generated| ; 0 (0)               ; 0 (0)                     ; 8192              ; 0          ; 0    ; 0            ; |single|eImem:inst3|lpm_rom:data_memory|altrom:srom|altsyncram:rom_block|altsyncram_l961:auto_generated    ; altsyncram_l961 ; work         ;
+;    |eMUX5:inst11|                               ; 4 (4)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |single|eMUX5:inst11                                                                                       ; eMUX5           ; work         ;
+;    |eMux32:inst12|                              ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |single|eMux32:inst12                                                                                      ; eMux32          ; work         ;
+;    |eMux32:inst13|                              ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |single|eMux32:inst13                                                                                      ; eMux32          ; work         ;
+;    |eMux32:inst7|                               ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |single|eMux32:inst7                                                                                       ; eMux32          ; work         ;
+;    |ePC:inst|                                   ; 0 (0)               ; 30 (30)                   ; 0                 ; 0          ; 0    ; 0            ; |single|ePC:inst                                                                                           ; ePC             ; work         ;
+;    |eRegFile:inst4|                             ; 382 (382)           ; 480 (480)                 ; 0                 ; 0          ; 0    ; 0            ; |single|eRegFile:inst4                                                                                     ; eRegFile        ; work         ;
+;    |eShiftAdder:inst1|                          ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |single|eShiftAdder:inst1                                                                                  ; eShiftAdder     ; work         ;
++-------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                 ;
++---------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------+
+; Name                                                                                                          ; Type ; Mode        ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF      ;
++---------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------+
+; eDmem:inst5|lpm_ram_dq:data_memory|altram:sram|altsyncram:ram_block|altsyncram_8sf1:auto_generated|ALTSYNCRAM ; AUTO ; Single Port ; 256          ; 32           ; --           ; --           ; 8192 ; dmem.mif ;
+; eImem:inst3|lpm_rom:data_memory|altrom:srom|altsyncram:rom_block|altsyncram_l961:auto_generated|ALTSYNCRAM    ; AUTO ; ROM         ; 256          ; 32           ; --           ; --           ; 8192 ; imem.mif ;
++---------------------------------------------------------------------------------------------------------------+------+-------------+--------------+--------------+--------------+--------------+------+----------+
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; ePC:inst|pOut[1]                      ; Merged with ePC:inst|pOut[0]           ;
+; ePC:inst|pOut[0]                      ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 2 ;                                        ;
++---------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 510   ;
+; Number of registers using Synchronous Clear  ; 273   ;
+; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 476   ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output            ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |single|eRegFile:inst4|saReg[1][15]   ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |single|eRegFile:inst4|saReg[2][3]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |single|eRegFile:inst4|saReg[3][1]    ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |single|eRegFile:inst4|saReg[3][16]   ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |single|eRegFile:inst4|saReg[4][13]   ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |single|eRegFile:inst4|saReg[5][2]    ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |single|eRegFile:inst4|saReg[5][5]    ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |single|eRegFile:inst4|saReg[6][2]    ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 0 LEs                ; 60 LEs                 ; Yes        ; |single|eRegFile:inst4|saReg[6][23]   ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |single|eRegFile:inst4|saReg[7][1]    ;
+; 3:1                ; 29 bits   ; 58 LEs        ; 0 LEs                ; 58 LEs                 ; Yes        ; |single|eRegFile:inst4|saReg[7][12]   ;
+; 3:1                ; 31 bits   ; 62 LEs        ; 0 LEs                ; 62 LEs                 ; Yes        ; |single|eRegFile:inst4|saReg[8][25]   ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |single|eRegFile:inst4|pReadData1[28] ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |single|eRegFile:inst4|pReadData2[8]  ;
+; 63:1               ; 32 bits   ; 1344 LEs      ; 0 LEs                ; 1344 LEs               ; No         ; |single|eALU:inst6|Add0               ;
+; 63:1               ; 32 bits   ; 1344 LEs      ; 32 LEs               ; 1312 LEs               ; No         ; |single|eALU:inst6|Add0               ;
+; 66:1               ; 32 bits   ; 1408 LEs      ; 64 LEs               ; 1344 LEs               ; No         ; |single|eALU:inst6|sO[29]             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for eImem:inst3|LPM_ROM:data_memory|altrom:srom|altsyncram:rom_block|altsyncram_l961:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                       ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                        ;
++---------------------------------+--------------------+------+----------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for eDmem:inst5|LPM_RAM_DQ:data_memory|altram:sram|altsyncram:ram_block|altsyncram_8sf1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                          ;
++---------------------------------+--------------------+------+-------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                           ;
++---------------------------------+--------------------+------+-------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: eImem:inst3|LPM_ROM:data_memory ;
++------------------------+--------------+--------------------------------------+
+; Parameter Name         ; Value        ; Type                                 ;
++------------------------+--------------+--------------------------------------+
+; LPM_WIDTH              ; 32           ; Signed Integer                       ;
+; LPM_WIDTHAD            ; 8            ; Signed Integer                       ;
+; LPM_NUMWORDS           ; 0            ; Signed Integer                       ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped                              ;
+; LPM_OUTDATA            ; UNREGISTERED ; Untyped                              ;
+; LPM_FILE               ; imem.mif     ; Untyped                              ;
+; DEVICE_FAMILY          ; Cyclone V    ; Untyped                              ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                           ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                         ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                         ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                       ;
++------------------------+--------------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: eDmem:inst5|LPM_RAM_DQ:data_memory ;
++------------------------+--------------+-----------------------------------------+
+; Parameter Name         ; Value        ; Type                                    ;
++------------------------+--------------+-----------------------------------------+
+; LPM_WIDTH              ; 32           ; Signed Integer                          ;
+; LPM_WIDTHAD            ; 8            ; Signed Integer                          ;
+; LPM_NUMWORDS           ; 0            ; Signed Integer                          ;
+; LPM_INDATA             ; REGISTERED   ; Untyped                                 ;
+; LPM_ADDRESS_CONTROL    ; REGISTERED   ; Untyped                                 ;
+; LPM_OUTDATA            ; UNREGISTERED ; Untyped                                 ;
+; LPM_FILE               ; dmem.mif     ; Untyped                                 ;
+; USE_EAB                ; ON           ; Untyped                                 ;
+; DEVICE_FAMILY          ; Cyclone V    ; Untyped                                 ;
+; CBXI_PARAMETER         ; NOTHING      ; Untyped                                 ;
+; AUTO_CARRY_CHAINS      ; ON           ; AUTO_CARRY                              ;
+; IGNORE_CARRY_BUFFERS   ; OFF          ; IGNORE_CARRY                            ;
+; AUTO_CASCADE_CHAINS    ; ON           ; AUTO_CASCADE                            ;
+; IGNORE_CASCADE_BUFFERS ; OFF          ; IGNORE_CASCADE                          ;
++------------------------+--------------+-----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; arriav_ff             ; 510                         ;
+;     ENA               ; 233                         ;
+;     ENA SCLR          ; 243                         ;
+;     SCLR              ; 30                          ;
+;     SLD               ; 4                           ;
+; arriav_io_obuf        ; 32                          ;
+; arriav_lcell_comb     ; 691                         ;
+;     arith             ; 96                          ;
+;         1 data inputs ; 30                          ;
+;         3 data inputs ; 2                           ;
+;         5 data inputs ; 64                          ;
+;     normal            ; 565                         ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 40                          ;
+;         3 data inputs ; 12                          ;
+;         4 data inputs ; 73                          ;
+;         5 data inputs ; 27                          ;
+;         6 data inputs ; 412                         ;
+;     shared            ; 30                          ;
+;         2 data inputs ; 30                          ;
+; boundary_port         ; 230                         ;
+; stratixv_ram_block    ; 64                          ;
+;                       ;                             ;
+; Max LUT depth         ; 10.10                       ;
+; Average LUT depth     ; 7.74                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:04     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Tue May 28 18:55:07 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off single -c single
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file epc.vhd
+    Info (12022): Found design unit 1: ePC-behavior File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/ePC.vhd Line: 13
+    Info (12023): Found entity 1: ePC File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/ePC.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file esignextend.vhd
+    Info (12022): Found design unit 1: eSignExtend-logic File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eSignExtend.vhd Line: 11
+    Info (12023): Found entity 1: eSignExtend File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eSignExtend.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file eshiftadder.vhd
+    Info (12022): Found design unit 1: eShiftAdder-behavior File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eShiftAdder.vhd Line: 15
+    Info (12023): Found entity 1: eShiftAdder File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eShiftAdder.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file eregfile.vhd
+    Info (12022): Found design unit 1: eRegFile-behavior File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eRegFile.vhd Line: 20
+    Info (12023): Found entity 1: eRegFile File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eRegFile.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file emux32.vhd
+    Info (12022): Found design unit 1: eMux32-logic File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eMUX32.vhd Line: 13
+    Info (12023): Found entity 1: eMux32 File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eMUX32.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file emux5.vhd
+    Info (12022): Found design unit 1: eMUX5-logic File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eMUX5.vhd Line: 13
+    Info (12023): Found entity 1: eMUX5 File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eMUX5.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file eimem.vhd
+    Info (12022): Found design unit 1: eImem-behavior File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eImem.vhd Line: 14
+    Info (12023): Found entity 1: eImem File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eImem.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file edmem.vhd
+    Info (12022): Found design unit 1: eDmem-behavior File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 19
+    Info (12023): Found entity 1: eDmem File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file econtrol.vhd
+    Info (12022): Found design unit 1: eControl-logic File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eControl.vhd Line: 19
+    Info (12023): Found entity 1: eControl File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eControl.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ealu.vhd
+    Info (12022): Found design unit 1: eALU-behavior File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eALU.vhd Line: 19
+    Info (12023): Found entity 1: eALU File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eALU.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file eadd4.vhd
+    Info (12022): Found design unit 1: eAdd4-behavior File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eAdd4.vhd Line: 14
+    Info (12023): Found entity 1: eAdd4 File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eAdd4.vhd Line: 7
+Info (12021): Found 1 design units, including 1 entities, in source file single.bdf
+    Info (12023): Found entity 1: single
+Info (12021): Found 1 design units, including 1 entities, in source file yeshi.bdf
+    Info (12023): Found entity 1: yeshi
+Info (12127): Elaborating entity "single" for the top level hierarchy
+Info (12128): Elaborating entity "eControl" for hierarchy "eControl:inst2"
+Info (12128): Elaborating entity "eImem" for hierarchy "eImem:inst3"
+Info (12128): Elaborating entity "LPM_ROM" for hierarchy "eImem:inst3|LPM_ROM:data_memory" File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eImem.vhd Line: 16
+Info (12130): Elaborated megafunction instantiation "eImem:inst3|LPM_ROM:data_memory" File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eImem.vhd Line: 16
+Info (12133): Instantiated megafunction "eImem:inst3|LPM_ROM:data_memory" with the following parameter: File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eImem.vhd Line: 16
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_WIDTHAD" = "8"
+    Info (12134): Parameter "LPM_NUMWORDS" = "0"
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info (12134): Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "imem.mif"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_ROM"
+    Info (12134): Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12128): Elaborating entity "altrom" for hierarchy "eImem:inst3|LPM_ROM:data_memory|altrom:srom" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 54
+Info (12131): Elaborated megafunction instantiation "eImem:inst3|LPM_ROM:data_memory|altrom:srom", which is child of megafunction instantiation "eImem:inst3|LPM_ROM:data_memory" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 54
+Info (12128): Elaborating entity "altsyncram" for hierarchy "eImem:inst3|LPM_ROM:data_memory|altrom:srom|altsyncram:rom_block" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.tdf Line: 88
+Info (12131): Elaborated megafunction instantiation "eImem:inst3|LPM_ROM:data_memory|altrom:srom|altsyncram:rom_block", which is child of megafunction instantiation "eImem:inst3|LPM_ROM:data_memory" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.tdf Line: 88
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_l961.tdf
+    Info (12023): Found entity 1: altsyncram_l961 File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/db/altsyncram_l961.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_l961" for hierarchy "eImem:inst3|LPM_ROM:data_memory|altrom:srom|altsyncram:rom_block|altsyncram_l961:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "ePC" for hierarchy "ePC:inst"
+Info (12128): Elaborating entity "eMux32" for hierarchy "eMux32:inst13"
+Warning (10492): VHDL Process Statement warning at eMUX32.vhd(18): signal "pIn0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eMUX32.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at eMUX32.vhd(20): signal "pIn1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eMUX32.vhd Line: 20
+Info (12128): Elaborating entity "eALU" for hierarchy "eALU:inst6"
+Info (12128): Elaborating entity "eRegFile" for hierarchy "eRegFile:inst4"
+Info (12128): Elaborating entity "eDmem" for hierarchy "eDmem:inst5"
+Info (12128): Elaborating entity "LPM_RAM_DQ" for hierarchy "eDmem:inst5|LPM_RAM_DQ:data_memory" File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 22
+Info (12130): Elaborated megafunction instantiation "eDmem:inst5|LPM_RAM_DQ:data_memory" File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 22
+Info (12133): Instantiated megafunction "eDmem:inst5|LPM_RAM_DQ:data_memory" with the following parameter: File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 22
+    Info (12134): Parameter "LPM_WIDTH" = "32"
+    Info (12134): Parameter "LPM_WIDTHAD" = "8"
+    Info (12134): Parameter "LPM_NUMWORDS" = "0"
+    Info (12134): Parameter "LPM_INDATA" = "REGISTERED"
+    Info (12134): Parameter "LPM_ADDRESS_CONTROL" = "REGISTERED"
+    Info (12134): Parameter "LPM_OUTDATA" = "UNREGISTERED"
+    Info (12134): Parameter "LPM_FILE" = "dmem.mif"
+    Info (12134): Parameter "LPM_TYPE" = "LPM_RAM_DQ"
+    Info (12134): Parameter "USE_EAB" = "ON"
+    Info (12134): Parameter "INTENDED_DEVICE_FAMILY" = "UNUSED"
+    Info (12134): Parameter "LPM_HINT" = "UNUSED"
+Info (12128): Elaborating entity "altram" for hierarchy "eDmem:inst5|LPM_RAM_DQ:data_memory|altram:sram" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_ram_dq.tdf Line: 105
+Warning (287001): Assertion warning: altram does not support Cyclone V device family -- attempting best-case memory conversions, but power-up states and read during write behavior will be different for Cyclone V devices File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.tdf Line: 211
+Info (12131): Elaborated megafunction instantiation "eDmem:inst5|LPM_RAM_DQ:data_memory|altram:sram", which is child of megafunction instantiation "eDmem:inst5|LPM_RAM_DQ:data_memory" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_ram_dq.tdf Line: 105
+Info (12128): Elaborating entity "altsyncram" for hierarchy "eDmem:inst5|LPM_RAM_DQ:data_memory|altram:sram|altsyncram:ram_block" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.tdf Line: 102
+Info (12131): Elaborated megafunction instantiation "eDmem:inst5|LPM_RAM_DQ:data_memory|altram:sram|altsyncram:ram_block", which is child of megafunction instantiation "eDmem:inst5|LPM_RAM_DQ:data_memory" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.tdf Line: 102
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8sf1.tdf
+    Info (12023): Found entity 1: altsyncram_8sf1 File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/db/altsyncram_8sf1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_8sf1" for hierarchy "eDmem:inst5|LPM_RAM_DQ:data_memory|altram:sram|altsyncram:ram_block|altsyncram_8sf1:auto_generated" File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "eMUX5" for hierarchy "eMUX5:inst11"
+Warning (10492): VHDL Process Statement warning at eMUX5.vhd(18): signal "pIn1" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eMUX5.vhd Line: 18
+Warning (10492): VHDL Process Statement warning at eMUX5.vhd(20): signal "pIn0" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eMUX5.vhd Line: 20
+Info (12128): Elaborating entity "eSignExtend" for hierarchy "eSignExtend:inst9"
+Info (12128): Elaborating entity "eAdd4" for hierarchy "eAdd4:inst8"
+Info (12128): Elaborating entity "eShiftAdder" for hierarchy "eShiftAdder:inst1"
+Warning (13044): Always-enabled tri-state buffer(s) removed
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[31]" to the node "pInstruction[31]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[30]" to the node "pInstruction[30]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[29]" to the node "pInstruction[29]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[28]" to the node "pInstruction[28]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[27]" to the node "pInstruction[27]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[26]" to the node "pInstruction[26]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[5]" to the node "pInstruction[5]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[4]" to the node "pInstruction[4]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[3]" to the node "pInstruction[3]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[2]" to the node "pInstruction[2]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[1]" to the node "pInstruction[1]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[0]" to the node "pInstruction[0]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[25]" to the node "pInstruction[25]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[24]" to the node "pInstruction[24]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[23]" to the node "pInstruction[23]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[22]" to the node "pInstruction[22]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[21]" to the node "pInstruction[21]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[20]" to the node "pInstruction[20]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[19]" to the node "pInstruction[19]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[18]" to the node "pInstruction[18]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[17]" to the node "pInstruction[17]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[16]" to the node "pInstruction[16]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[15]" to the node "pInstruction[15]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[14]" to the node "pInstruction[14]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[13]" to the node "pInstruction[13]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[12]" to the node "pInstruction[12]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[11]" to the node "pInstruction[11]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[10]" to the node "pInstruction[10]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[9]" to the node "pInstruction[9]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[8]" to the node "pInstruction[8]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[7]" to the node "pInstruction[7]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[6]" to the node "pInstruction[6]" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[25]" to the node "eRegFile:inst4|Equal0" into a wire File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+Warning (13046): Tri-state node(s) do not directly drive top-level pin(s)
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[31]" to the node "eControl:inst2|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[30]" to the node "eControl:inst2|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[29]" to the node "eControl:inst2|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[28]" to the node "eControl:inst2|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[27]" to the node "eControl:inst2|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[26]" to the node "eControl:inst2|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[5]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[4]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[3]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[2]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[1]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[0]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[24]" to the node "eRegFile:inst4|Equal0" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[23]" to the node "eRegFile:inst4|Equal0" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[22]" to the node "eRegFile:inst4|Equal0" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[21]" to the node "eRegFile:inst4|Equal0" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[20]" to the node "eRegFile:inst4|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[19]" to the node "eRegFile:inst4|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[18]" to the node "eRegFile:inst4|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[17]" to the node "eRegFile:inst4|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[16]" to the node "eRegFile:inst4|Equal1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[15]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[14]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[13]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[12]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[11]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[10]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[9]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[8]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[7]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eImem:inst3|lpm_rom:data_memory|otri[6]" to the node "eShiftAdder:inst1|Add1" into an OR gate File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_rom.tdf Line: 67
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[31]" to the node "eMux32:inst12|pOut[31]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[30]" to the node "eMux32:inst12|pOut[30]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[29]" to the node "eMux32:inst12|pOut[29]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[28]" to the node "eMux32:inst12|pOut[28]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[27]" to the node "eMux32:inst12|pOut[27]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[26]" to the node "eMux32:inst12|pOut[26]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[25]" to the node "eMux32:inst12|pOut[25]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[24]" to the node "eMux32:inst12|pOut[24]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[23]" to the node "eMux32:inst12|pOut[23]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[22]" to the node "eMux32:inst12|pOut[22]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[21]" to the node "eMux32:inst12|pOut[21]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[20]" to the node "eMux32:inst12|pOut[20]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[19]" to the node "eMux32:inst12|pOut[19]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[18]" to the node "eMux32:inst12|pOut[18]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[17]" to the node "eMux32:inst12|pOut[17]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[16]" to the node "eMux32:inst12|pOut[16]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[15]" to the node "eMux32:inst12|pOut[15]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[14]" to the node "eMux32:inst12|pOut[14]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[13]" to the node "eMux32:inst12|pOut[13]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[12]" to the node "eMux32:inst12|pOut[12]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[11]" to the node "eMux32:inst12|pOut[11]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[10]" to the node "eMux32:inst12|pOut[10]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[9]" to the node "eMux32:inst12|pOut[9]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[8]" to the node "eMux32:inst12|pOut[8]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[7]" to the node "eMux32:inst12|pOut[7]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[6]" to the node "eMux32:inst12|pOut[6]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[5]" to the node "eMux32:inst12|pOut[5]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[4]" to the node "eMux32:inst12|pOut[4]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[3]" to the node "eMux32:inst12|pOut[3]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[2]" to the node "eMux32:inst12|pOut[2]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[1]" to the node "eMux32:inst12|pOut[1]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+    Warning (13047): Converted the fan-out from the tri-state buffer "eDmem:inst5|pReadData[0]" to the node "eMux32:inst12|pOut[0]" into an OR gate File: C:/Users/hipip/Documents/2019/3-1/Computer Architecture/homework/Exercise2/CA_ex2_single_bd/eDmem.vhd Line: 14
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "pNEXTPC[1]" is stuck at GND
+    Warning (13410): Pin "pNEXTPC[0]" is stuck at GND
+    Warning (13410): Pin "pPC[1]" is stuck at GND
+    Warning (13410): Pin "pPC[0]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 1490 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 228 output pins
+    Info (21061): Implemented 1196 logic cells
+    Info (21064): Implemented 64 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 109 warnings
+    Info: Peak virtual memory: 4913 megabytes
+    Info: Processing ended: Tue May 28 18:55:36 2019
+    Info: Elapsed time: 00:00:29
+    Info: Total CPU time (on all processors): 00:00:54
+
+
